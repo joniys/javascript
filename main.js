@@ -1,9 +1,30 @@
-console.log("hello");
++function validation(){
+    var name = document.getElementById("name");
+    var valid_name_regex = /^[A-Za-z]+$/;
 
-var i =0;
+    if(name.matches(valid_name_regex)){
+        return true;
+    }else{
 
-do{
-    i = 1 + 1;
-    console.log(1);
+        document.getElementById("name_error").style.visibility="visible";
+        document.getElementById("name").style.borderColor="red";
+        return false;
+    }
 
-}while(1<5);
+}
+
+
++function validation(){
+    var age = document.getElementById("age");
+    var valid_age_regex = /^[A-Za-z]+$/;
+
+    if(age.matches(valid_age_regex)){
+        return true;
+    }else{
+
+        document.getElementById("age_error").style.visibility="visible";
+        document.getElementById("age").style.borderColor="red";
+        return false;
+    }
+
+}
